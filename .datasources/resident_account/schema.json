@@ -1,0 +1,313 @@
+
+{
+  "name": "resident_account",
+  "title": "居民账户",
+  "schemas": [
+    {
+      "name": "user_id",
+      "title": "用户ID",
+      "type": "String"
+    },
+    {
+      "name": "phone_number",
+      "title": "手机号",
+      "type": "String"
+    },
+    {
+      "name": "nickname",
+      "title": "昵称",
+      "type": "String"
+    },
+    {
+      "name": "access_card_number",
+      "title": "门禁卡号",
+      "type": "String"
+    },
+    {
+      "name": "avatar_url",
+      "title": "头像URL",
+      "type": "Image"
+    },
+    {
+      "name": "member_level",
+      "title": "会员等级",
+      "type": "String",
+      "enum": ["普通会员", "白银会员", "黄金会员", "铂金会员", "钻石会员"],
+      "enumNames": ["普通会员", "白银会员", "黄金会员", "铂金会员", "钻石会员"]
+    },
+    {
+      "name": "total_points",
+      "title": "累计积分",
+      "type": "Number"
+    },
+    {
+      "name": "carbon_points",
+      "title": "碳积分",
+      "type": "Number"
+    },
+    {
+      "name": "total_disposals",
+      "title": "总投放次数",
+      "type": "Number"
+    },
+    {
+      "name": "streak_days",
+      "title": "连续打卡天数",
+      "type": "Number"
+    },
+    {
+      "name": "disposal_records",
+      "title": "历史投放记录",
+      "type": "Array",
+      "items": {
+        "type": "Object",
+        "properties": {
+          "record_id": {
+            "type": "String",
+            "title": "记录ID"
+          },
+          "disposal_time": {
+            "type": "DateTime",
+            "title": "投放时间"
+          },
+          "collection_point_id": {
+            "type": "String",
+            "title": "投放点ID"
+          },
+          "collection_point_name": {
+            "type": "String",
+            "title": "投放点名称"
+          },
+          "waste_type": {
+            "type": "String",
+            "title": "垃圾类型"
+          },
+          "weight": {
+            "type": "Number",
+            "title": "投放重量(kg)"
+          },
+          "quality_score": {
+            "type": "Number",
+            "title": "分类质量评分"
+          },
+          "points_earned": {
+            "type": "Number",
+            "title": "获得积分"
+          },
+          "image_url": {
+            "type": "Image",
+            "title": "投放照片"
+          },
+          "ai_feedback": {
+            "type": "String",
+            "title": "AI反馈"
+          }
+        }
+      }
+    },
+    {
+      "name": "redeem_records",
+      "title": "兑换记录",
+      "type": "Array",
+      "items": {
+        "type": "Object",
+        "properties": {
+          "redeem_id": {
+            "type": "String",
+            "title": "兑换ID"
+          },
+          "product_id": {
+            "type": "String",
+            "title": "商品ID"
+          },
+          "product_name": {
+            "type": "String",
+            "title": "商品名称"
+          },
+          "points_cost": {
+            "type": "Number",
+            "title": "消耗积分"
+          },
+          "redeem_time": {
+            "type": "DateTime",
+            "title": "兑换时间"
+          },
+          "status": {
+            "type": "String",
+            "title": "兑换状态"
+          },
+          "delivery_address": {
+            "type": "String",
+            "title": "配送地址"
+          },
+          "tracking_number": {
+            "type": "String",
+            "title": "快递单号"
+          }
+        }
+      }
+    },
+    {
+      "name": "report_records",
+      "title": "曝光记录",
+      "type": "Array",
+      "items": {
+        "type": "Object",
+        "properties": {
+          "report_id": {
+            "type": "String",
+            "title": "曝光ID"
+          },
+          "report_type": {
+            "type": "String",
+            "title": "曝光类型"
+          },
+          "location": {
+            "type": "String",
+            "title": "曝光地点"
+          },
+          "description": {
+            "type": "String",
+            "title": "曝光描述"
+          },
+          "images": {
+            "type": "Array",
+            "title": "曝光图片",
+            "items": {
+              "type": "Image"
+            }
+          },
+          "report_time": {
+            "type": "DateTime",
+            "title": "曝光时间"
+          },
+          "status": {
+            "type": "String",
+            "title": "处理状态"
+          },
+          "response": {
+            "type": "String",
+            "title": "处理回复"
+          },
+          "response_time": {
+            "type": "DateTime",
+            "title": "回复时间"
+          }
+        }
+      }
+    },
+    {
+      "name": "appointment_records",
+      "title": "预约记录",
+      "type": "Array",
+      "items": {
+        "type": "Object",
+        "properties": {
+          "appointment_id": {
+            "type": "String",
+            "title": "预约ID"
+          },
+          "appointment_type": {
+            "type": "String",
+            "title": "预约类型"
+          },
+          "appointment_date": {
+            "type": "Date",
+            "title": "预约日期"
+          },
+          "appointment_time": {
+            "type": "String",
+            "title": "预约时间段"
+          },
+          "address": {
+            "type": "String",
+            "title": "详细地址"
+          },
+          "items": {
+            "type": "Array",
+            "title": "回收物品",
+            "items": {
+              "type": "String"
+            }
+          },
+          "status": {
+            "type": "String",
+            "title": "预约状态"
+          },
+          "notes": {
+            "type": "String",
+            "title": "备注信息"
+          }
+        }
+      }
+    },
+    {
+      "name": "quiz_records",
+      "title": "答题记录",
+      "type": "Array",
+      "items": {
+        "type": "Object",
+        "properties": {
+          "quiz_id": {
+            "type": "String",
+            "title": "答题ID"
+          },
+          "question": {
+            "type": "String",
+            "title": "问题内容"
+          },
+          "user_answer": {
+            "type": "String",
+            "title": "用户答案"
+          },
+          "correct_answer": {
+            "type": "String",
+            "title": "正确答案"
+          },
+          "is_correct": {
+            "type": "Boolean",
+            "title": "是否正确"
+          },
+          "points_earned": {
+            "type": "Number",
+            "title": "获得积分"
+          },
+          "answer_time": {
+            "type": "DateTime",
+            "title": "答题时间"
+          }
+        }
+      }
+    },
+    {
+      "name": "registration_date",
+      "title": "注册日期",
+      "type": "Date"
+    },
+    {
+      "name": "last_login_time",
+      "title": "最后登录时间",
+      "type": "DateTime"
+    },
+    {
+      "name": "preferences",
+      "title": "个人偏好",
+      "type": "Object",
+      "properties": {
+        "notification_enabled": {
+          "type": "Boolean",
+          "title": "是否开启通知"
+        },
+        "language": {
+          "type": "String",
+          "title": "语言偏好"
+        },
+        "theme": {
+          "type": "String",
+          "title": "主题偏好"
+        }
+      }
+    }
+  ]
+}
+  

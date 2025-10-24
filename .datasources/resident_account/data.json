@@ -1,0 +1,312 @@
+
+[
+  {
+    "_id": "1",
+    "user_id": "USER-001",
+    "phone_number": "13800138001",
+    "nickname": "张小明",
+    "access_card_number": "CARD-2024001",
+    "avatar_url": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face",
+    "member_level": "黄金会员",
+    "total_points": 2580,
+    "carbon_points": 1560,
+    "total_disposals": 156,
+    "streak_days": 23,
+    "disposal_records": [
+      {
+        "record_id": "DISP-001",
+        "disposal_time": 1706008800000,
+        "collection_point_id": "POINT-001",
+        "collection_point_name": "幸福小区A栋垃圾屋",
+        "waste_type": "可回收物",
+        "weight": 2.5,
+        "quality_score": 95,
+        "points_earned": 5,
+        "image_url": "https://example.com/disposal/001.jpg",
+        "ai_feedback": "分类准确，投放规范"
+      },
+      {
+        "record_id": "DISP-002",
+        "disposal_time": 1706005200000,
+        "collection_point_id": "POINT-002",
+        "collection_point_name": "阳光花园B区投放点",
+        "waste_type": "厨余垃圾",
+        "weight": 1.8,
+        "quality_score": 88,
+        "points_earned": 3,
+        "image_url": "https://example.com/disposal/002.jpg",
+        "ai_feedback": "分类基本正确，建议去除包装物"
+      },
+      {
+        "record_id": "DISP-003",
+        "disposal_time": 1706001600000,
+        "collection_point_id": "POINT-003",
+        "collection_point_name": "绿地小区C栋收集站",
+        "waste_type": "有害垃圾",
+        "weight": 0.5,
+        "quality_score": 100,
+        "points_earned": 10,
+        "image_url": "https://example.com/disposal/003.jpg",
+        "ai_feedback": "分类准确，投放规范"
+      }
+    ],
+    "redeem_records": [
+      {
+        "redeem_id": "REDEEM-001",
+        "product_id": "PROD-001",
+        "product_name": "环保购物袋",
+        "points_cost": 200,
+        "redeem_time": 1705998000000,
+        "status": "已发货",
+        "delivery_address": "幸福小区A栋501",
+        "tracking_number": "SF123456789"
+      },
+      {
+        "redeem_id": "REDEEM-002",
+        "product_id": "PROD-002",
+        "product_name": "不锈钢保温杯",
+        "points_cost": 500,
+        "redeem_time": 1705994400000,
+        "status": "待发货",
+        "delivery_address": "幸福小区A栋501",
+        "tracking_number": null
+      }
+    ],
+    "report_records": [
+      {
+        "report_id": "REPORT-001",
+        "report_type": "垃圾混投",
+        "location": "阳光花园B区",
+        "description": "发现有人将厨余垃圾和可回收物混投",
+        "images": [
+          "https://example.com/report/001-1.jpg",
+          "https://example.com/report/001-2.jpg"
+        ],
+        "report_time": 1705987200000,
+        "status": "已处理",
+        "response": "已安排工作人员现场处理，感谢您的监督",
+        "response_time": 1705990800000
+      }
+    ],
+    "appointment_records": [
+      {
+        "appointment_id": "APPT-001",
+        "appointment_type": "大件垃圾",
+        "appointment_date": "2024-01-15",
+        "appointment_time": "14:00-16:00",
+        "address": "幸福小区A栋501",
+        "items": ["旧沙发", "床垫", "衣柜"],
+        "status": "已确认",
+        "notes": "请提前将物品搬到楼下"
+      },
+      {
+        "appointment_id": "APPT-002",
+        "appointment_type": "电子垃圾",
+        "appointment_date": "2024-01-18",
+        "appointment_time": "09:00-11:00",
+        "address": "幸福小区A栋501",
+        "items": ["旧电视", "电脑主机", "打印机"],
+        "status": "待确认",
+        "notes": null
+      }
+    ],
+    "quiz_records": [
+      {
+        "quiz_id": "QUIZ-001",
+        "question": "废旧电池应该投放到哪个垃圾桶？",
+        "user_answer": "有害垃圾",
+        "correct_answer": "有害垃圾",
+        "is_correct": true,
+        "points_earned": 10,
+        "answer_time": 1706000400000
+      },
+      {
+        "quiz_id": "QUIZ-002",
+        "question": "牛奶盒清洗干净后属于什么垃圾？",
+        "user_answer": "厨余垃圾",
+        "correct_answer": "可回收物",
+        "is_correct": false,
+        "points_earned": 0,
+        "answer_time": 1705996800000
+      }
+    ],
+    "registration_date": 1704067200000,
+    "last_login_time": 1706013600000,
+    "preferences": {
+      "notification_enabled": true,
+      "language": "zh-CN",
+      "theme": "light"
+    },
+    "createdAt": 1704067200000,
+    "updatedAt": 1706013600000
+  },
+  {
+    "_id": "2",
+    "user_id": "USER-002",
+    "phone_number": "13800138002",
+    "nickname": "李小红",
+    "access_card_number": "CARD-2024002",
+    "avatar_url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face",
+    "member_level": "白银会员",
+    "total_points": 2340,
+    "carbon_points": 1420,
+    "total_disposals": 128,
+    "streak_days": 15,
+    "disposal_records": [
+      {
+        "record_id": "DISP-004",
+        "disposal_time": 1706006400000,
+        "collection_point_id": "POINT-002",
+        "collection_point_name": "阳光花园B区投放点",
+        "waste_type": "厨余垃圾",
+        "weight": 2.2,
+        "quality_score": 92,
+        "points_earned": 4,
+        "image_url": "https://example.com/disposal/004.jpg",
+        "ai_feedback": "分类准确，投放规范"
+      }
+    ],
+    "redeem_records": [
+      {
+        "redeem_id": "REDEEM-003",
+        "product_id": "PROD-003",
+        "product_name": "有机蔬菜券",
+        "points_cost": 300,
+        "redeem_time": 1705999200000,
+        "status": "已使用",
+        "delivery_address": "阳光花园B区3-2-301",
+        "tracking_number": null
+      }
+    ],
+    "report_records": [],
+    "appointment_records": [],
+    "quiz_records": [
+      {
+        "quiz_id": "QUIZ-003",
+        "question": "过期药品属于什么垃圾？",
+        "user_answer": "有害垃圾",
+        "correct_answer": "有害垃圾",
+        "is_correct": true,
+        "points_earned": 10,
+        "answer_time": 1706004000000
+      }
+    ],
+    "registration_date": 1704153600000,
+    "last_login_time": 1706010000000,
+    "preferences": {
+      "notification_enabled": true,
+      "language": "zh-CN",
+      "theme": "light"
+    },
+    "createdAt": 1704153600000,
+    "updatedAt": 1706010000000
+  },
+  {
+    "_id": "3",
+    "user_id": "USER-003",
+    "phone_number": "13800138003",
+    "nickname": "王小华",
+    "access_card_number": "CARD-2024003",
+    "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
+    "member_level": "铂金会员",
+    "total_points": 2100,
+    "carbon_points": 1680,
+    "total_disposals": 189,
+    "streak_days": 31,
+    "disposal_records": [
+      {
+        "record_id": "DISP-005",
+        "disposal_time": 1706010000000,
+        "collection_point_id": "POINT-004",
+        "collection_point_name": "和谐家园D区垃圾房",
+        "waste_type": "其他垃圾",
+        "weight": 1.5,
+        "quality_score": 85,
+        "points_earned": 3,
+        "image_url": "https://example.com/disposal/005.jpg",
+        "ai_feedback": "分类基本正确"
+      },
+      {
+        "record_id": "DISP-006",
+        "disposal_time": 1706007600000,
+        "collection_point_id": "POINT-001",
+        "collection_point_name": "幸福小区A栋垃圾屋",
+        "waste_type": "可回收物",
+        "weight": 3.2,
+        "quality_score": 98,
+        "points_earned": 6,
+        "image_url": "https://example.com/disposal/006.jpg",
+        "ai_feedback": "分类准确，投放规范"
+      }
+    ],
+    "redeem_records": [
+      {
+        "redeem_id": "REDEEM-004",
+        "product_id": "PROD-004",
+        "product_name": "电影票",
+        "points_cost": 800,
+        "redeem_time": 1705987200000,
+        "status": "已使用",
+        "delivery_address": "和谐家园D区5-1-1201",
+        "tracking_number": null
+      }
+    ],
+    "report_records": [
+      {
+        "report_id": "REPORT-002",
+        "report_type": "垃圾桶满溢",
+        "location": "绿地小区C栋",
+        "description": "垃圾桶已满，垃圾溢出影响环境",
+        "images": [
+          "https://example.com/report/002-1.jpg"
+        ],
+        "report_time": 1705994400000,
+        "status": "处理中",
+        "response": null,
+        "response_time": null
+      }
+    ],
+    "appointment_records": [
+      {
+        "appointment_id": "APPT-003",
+        "appointment_type": "电子垃圾",
+        "appointment_date": "2024-01-20",
+        "appointment_time": "10:00-12:00",
+        "address": "和谐家园D区5-1-1201",
+        "items": ["旧电脑", "显示器", "键盘鼠标"],
+        "status": "待确认",
+        "notes": "电脑可正常使用，建议捐赠"
+      }
+    ],
+    "quiz_records": [
+      {
+        "quiz_id": "QUIZ-004",
+        "question": "玻璃瓶属于什么垃圾？",
+        "user_answer": "可回收物",
+        "correct_answer": "可回收物",
+        "is_correct": true,
+        "points_earned": 10,
+        "answer_time": 1706007600000
+      },
+      {
+        "quiz_id": "QUIZ-005",
+        "question": "茶叶渣属于什么垃圾？",
+        "user_answer": "厨余垃圾",
+        "correct_answer": "厨余垃圾",
+        "is_correct": true,
+        "points_earned": 10,
+        "answer_time": 1706005200000
+      }
+    ],
+    "registration_date": 1703980800000,
+    "last_login_time": 1706017200000,
+    "preferences": {
+      "notification_enabled": true,
+      "language": "zh-CN",
+      "theme": "dark"
+    },
+    "createdAt": 1703980800000,
+    "updatedAt": 1706017200000
+  }
+]
+  

@@ -1,0 +1,278 @@
+
+{
+  "name": "waste_collection_vehicle",
+  "title": "垃圾清运车辆",
+  "schemas": [
+    {
+      "name": "vehicle_id",
+      "title": "车辆ID",
+      "type": "String"
+    },
+    {
+      "name": "plate_number",
+      "title": "车牌号",
+      "type": "String"
+    },
+    {
+      "name": "driver_name",
+      "title": "司机姓名",
+      "type": "String"
+    },
+    {
+      "name": "driver_phone",
+      "title": "司机电话",
+      "type": "String"
+    },
+    {
+      "name": "vehicle_type",
+      "title": "车辆类型",
+      "type": "String",
+      "enum": ["厨余垃圾车", "可回收物车", "有害垃圾车", "其他垃圾车", "混合垃圾车"],
+      "enumNames": ["厨余垃圾车", "可回收物车", "有害垃圾车", "其他垃圾车", "混合垃圾车"]
+    },
+    {
+      "name": "current_location",
+      "title": "当前位置",
+      "type": "Object",
+      "properties": {
+        "address": {
+          "type": "String",
+          "title": "位置描述"
+        },
+        "coordinates": {
+          "type": "Object",
+          "title": "GPS坐标",
+          "properties": {
+            "latitude": {
+              "type": "Number",
+              "title": "纬度"
+            },
+            "longitude": {
+              "type": "Number",
+              "title": "经度"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "status",
+      "title": "运行状态",
+      "type": "String",
+      "enum": ["collecting", "enroute", "idle", "maintenance", "offline"],
+      "enumNames": ["收运中", "前往中", "空闲", "维修中", "离线"]
+    },
+    {
+      "name": "today_collection_points",
+      "title": "今日已收运点位列表",
+      "type": "Array",
+      "items": {
+        "type": "Object",
+        "properties": {
+          "point_id": {
+            "type": "String",
+            "title": "投放点ID"
+          },
+          "point_name": {
+            "type": "String",
+            "title": "投放点名称"
+          },
+          "collection_time": {
+            "type": "DateTime",
+            "title": "收运时间"
+          },
+          "weight": {
+            "type": "Number",
+            "title": "收运重量(kg)"
+          }
+        }
+      }
+    },
+    {
+      "name": "total_collected_weight",
+      "title": "今日累计收运重量",
+      "type": "Number"
+    },
+    {
+      "name": "collection_progress",
+      "title": "收运进度百分比",
+      "type": "Number"
+    },
+    {
+      "name": "route_plan",
+      "title": "路线计划",
+      "type": "Object",
+      "properties": {
+        "route_id": {
+          "type": "String",
+          "title": "路线ID"
+        },
+        "route_name": {
+          "type": "String",
+          "title": "路线名称"
+        },
+        "total_distance": {
+          "type": "Number",
+          "title": "总距离(km)"
+        },
+        "estimated_duration": {
+          "type": "String",
+          "title": "预计时长"
+        },
+        "stops": {
+          "type": "Array",
+          "title": "途经站点",
+          "items": {
+            "type": "String"
+          }
+        },
+        "start_time": {
+          "type": "DateTime",
+          "title": "计划开始时间"
+        },
+        "end_time": {
+          "type": "DateTime",
+          "title": "计划结束时间"
+        }
+      }
+    },
+    {
+      "name": "fuel_level",
+      "title": "燃油量百分比",
+      "type": "Number"
+    },
+    {
+      "name": "current_speed",
+      "title": "当前速度(km/h)",
+      "type": "Number"
+    },
+    {
+      "name": "exception_records",
+      "title": "异常记录",
+      "type": "Array",
+      "items": {
+        "type": "Object",
+        "properties": {
+          "exception_id": {
+            "type": "String",
+            "title": "异常ID"
+          },
+          "type": {
+            "type": "String",
+            "title": "异常类型"
+          },
+          "level": {
+            "type": "String",
+            "title": "异常级别"
+          },
+          "description": {
+            "type": "String",
+            "title": "异常描述"
+          },
+          "location": {
+            "type": "String",
+            "title": "异常发生位置"
+          },
+          "coordinates": {
+            "type": "Object",
+            "title": "异常坐标",
+            "properties": {
+              "latitude": {
+                "type": "Number",
+                "title": "纬度"
+              },
+              "longitude": {
+                "type": "Number",
+                "title": "经度"
+              }
+            }
+          },
+          "occurred_at": {
+            "type": "DateTime",
+            "title": "异常发生时间"
+          },
+          "status": {
+            "type": "String",
+            "title": "处理状态"
+          },
+          "handled_by": {
+            "type": "String",
+            "title": "处理人"
+          },
+          "handled_at": {
+            "type": "DateTime",
+            "title": "处理时间"
+          }
+        }
+      }
+    },
+    {
+      "name": "transfer_station_records",
+      "title": "转运站记录",
+      "type": "Object",
+      "properties": {
+        "last_entry": {
+          "type": "Object",
+          "title": "最近一次进站",
+          "properties": {
+            "station_name": {
+              "type": "String",
+              "title": "转运站名称"
+            },
+            "entry_time": {
+              "type": "DateTime",
+              "title": "进站时间"
+            },
+            "exit_time": {
+              "type": "DateTime",
+              "title": "出站时间"
+            },
+            "weight_before": {
+              "type": "Number",
+              "title": "进站前重量(kg)"
+            },
+            "weight_after": {
+              "type": "Number",
+              "title": "出站后重量(kg)"
+            }
+          }
+        },
+        "today_entries": {
+          "type": "Array",
+          "title": "今日进出记录",
+          "items": {
+            "type": "Object",
+            "properties": {
+              "station_name": {
+                "type": "String",
+                "title": "转运站名称"
+              },
+              "entry_time": {
+                "type": "DateTime",
+                "title": "进站时间"
+              },
+              "exit_time": {
+                "type": "DateTime",
+                "title": "出站时间"
+              },
+              "weight_before": {
+                "type": "Number",
+                "title": "进站前重量(kg)"
+              },
+              "weight_after": {
+                "type": "Number",
+                "title": "出站后重量(kg)"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "last_update_time",
+      "title": "最后更新时间",
+      "type": "DateTime"
+    }
+  ]
+}
+  

@@ -1,0 +1,132 @@
+
+{
+  "name": "waste_collection_point",
+  "title": "垃圾分类投放点",
+  "schemas": [
+    {
+      "name": "id",
+      "title": "投放点ID",
+      "type": "String"
+    },
+    {
+      "name": "name",
+      "title": "投放点名称",
+      "type": "String"
+    },
+    {
+      "name": "address",
+      "title": "详细地址",
+      "type": "String"
+    },
+    {
+      "name": "type",
+      "title": "投放点类型",
+      "type": "String"
+    },
+    {
+      "name": "status",
+      "title": "运行状态",
+      "type": "String"
+    },
+    {
+      "name": "capacity",
+      "title": "容量百分比",
+      "type": "Number"
+    },
+    {
+      "name": "weight",
+      "title": "实时重量",
+      "type": "Number"
+    },
+    {
+      "name": "disposals",
+      "title": "今日投放次数",
+      "type": "Number"
+    },
+    {
+      "name": "totalWeight",
+      "title": "累计总重量",
+      "type": "Number"
+    },
+    {
+      "name": "aiCaptures",
+      "title": "AI抓拍次数",
+      "type": "Number"
+    },
+    {
+      "name": "hasCamera",
+      "title": "是否配备摄像头",
+      "type": "Boolean"
+    },
+    {
+      "name": "manager",
+      "title": "负责人",
+      "type": "String"
+    },
+    {
+      "name": "phone",
+      "title": "负责人电话",
+      "type": "String"
+    },
+    {
+      "name": "lastCollection",
+      "title": "最近清运时间",
+      "type": "DateTime"
+    },
+    {
+      "name": "lastUpdate",
+      "title": "最近更新时间",
+      "type": "DateTime"
+    },
+    {
+      "name": "alerts",
+      "title": "AI预警列表",
+      "type": "Array",
+      "items": {
+        "type": "Object",
+        "properties": {
+          "id": {
+            "type": "String",
+            "title": "预警ID"
+          },
+          "type": {
+            "type": "String",
+            "title": "预警类型"
+          },
+          "level": {
+            "type": "String",
+            "title": "预警级别"
+          },
+          "message": {
+            "type": "String",
+            "title": "预警消息"
+          },
+          "time": {
+            "type": "DateTime",
+            "title": "预警时间"
+          },
+          "status": {
+            "type": "String",
+            "title": "处理状态"
+          }
+        }
+      }
+    },
+    {
+      "name": "location",
+      "title": "地理位置",
+      "type": "Object",
+      "properties": {
+        "lat": {
+          "type": "Number",
+          "title": "纬度"
+        },
+        "lng": {
+          "type": "Number",
+          "title": "经度"
+        }
+      }
+    }
+  ]
+}
+  

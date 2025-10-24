@@ -1,0 +1,252 @@
+
+[
+  {
+    "_id": "1",
+    "vehicle_id": "VEH-001",
+    "plate_number": "沪A12345",
+    "driver_name": "张师傅",
+    "driver_phone": "13800138001",
+    "vehicle_type": "厨余垃圾车",
+    "current_location": {
+      "address": "阳光花园B区",
+      "coordinates": {
+        "latitude": 31.2294,
+        "longitude": 121.4747
+      }
+    },
+    "status": "collecting",
+    "today_collection_points": [
+      {
+        "point_id": "POINT-001",
+        "point_name": "幸福小区A栋垃圾屋",
+        "collection_time": 1706008800000,
+        "weight": 120.5
+      },
+      {
+        "point_id": "POINT-002",
+        "point_name": "阳光花园B区投放点",
+        "collection_time": 1706012400000,
+        "weight": 95.3
+      }
+    ],
+    "total_collected_weight": 215.8,
+    "collection_progress": 65,
+    "route_plan": {
+      "route_id": "ROUTE-001",
+      "route_name": "东部片区收运路线",
+      "total_distance": 12.5,
+      "estimated_duration": "2小时30分",
+      "stops": ["幸福小区", "阳光花园", "绿地小区", "和谐家园"],
+      "start_time": 1706001600000,
+      "end_time": 1706010600000
+    },
+    "fuel_level": 78,
+    "current_speed": 25,
+    "exception_records": [
+      {
+        "exception_id": "EXC-001",
+        "type": "滴漏报警",
+        "level": "warning",
+        "description": "车辆底部发现液体滴漏，疑似厨余垃圾渗滤液",
+        "location": "阳光大道与和平路交叉口",
+        "coordinates": {
+          "latitude": 31.2294,
+          "longitude": 121.4747
+        },
+        "occurred_at": 1706013000000,
+        "status": "investigating",
+        "handled_by": null,
+        "handled_at": null
+      }
+    ],
+    "transfer_station_records": {
+      "last_entry": {
+        "station_name": "东部转运站",
+        "entry_time": 1706005200000,
+        "exit_time": 1706005800000,
+        "weight_before": 0,
+        "weight_after": 0
+      },
+      "today_entries": [
+        {
+          "station_name": "东部转运站",
+          "entry_time": 1706005200000,
+          "exit_time": 1706005800000,
+          "weight_before": 0,
+          "weight_after": 0
+        }
+      ]
+    },
+    "last_update_time": 1706013600000,
+    "createdAt": 1705900800000,
+    "updatedAt": 1706013600000
+  },
+  {
+    "_id": "2",
+    "vehicle_id": "VEH-002",
+    "plate_number": "沪B67890",
+    "driver_name": "李师傅",
+    "driver_phone": "13800138002",
+    "vehicle_type": "可回收物车",
+    "current_location": {
+      "address": "前往绿地小区",
+      "coordinates": {
+        "latitude": 31.2284,
+        "longitude": 121.4757
+      }
+    },
+    "status": "enroute",
+    "today_collection_points": [
+      {
+        "point_id": "POINT-003",
+        "point_name": "绿地小区C栋收集站",
+        "collection_time": 1706010600000,
+        "weight": 85.2
+      }
+    ],
+    "total_collected_weight": 85.2,
+    "collection_progress": 40,
+    "route_plan": {
+      "route_id": "ROUTE-002",
+      "route_name": "西部片区收运路线",
+      "total_distance": 15.8,
+      "estimated_duration": "3小时15分",
+      "stops": ["智慧社区", "科技园区", "创新中心", "创业大厦"],
+      "start_time": 1706001600000,
+      "end_time": 1706013300000
+    },
+    "fuel_level": 45,
+    "current_speed": 35,
+    "exception_records": [
+      {
+        "exception_id": "EXC-002",
+        "type": "超速预警",
+        "level": "info",
+        "description": "车速超过限速10km/h，已提醒司机减速",
+        "location": "科技园区主干道",
+        "coordinates": {
+          "latitude": 31.2284,
+          "longitude": 121.4757
+        },
+        "occurred_at": 1706012400000,
+        "status": "resolved",
+        "handled_by": "系统管理员",
+        "handled_at": 1706012600000
+      }
+    ],
+    "transfer_station_records": {
+      "last_entry": null,
+      "today_entries": []
+    },
+    "last_update_time": 1706013300000,
+    "createdAt": 1705900800000,
+    "updatedAt": 1706013300000
+  },
+  {
+    "_id": "3",
+    "vehicle_id": "VEH-003",
+    "plate_number": "沪C24680",
+    "driver_name": "王师傅",
+    "driver_phone": "13800138003",
+    "vehicle_type": "有害垃圾车",
+    "current_location": {
+      "address": "停车场",
+      "coordinates": {
+        "latitude": 31.2304,
+        "longitude": 121.4737
+      }
+    },
+    "status": "idle",
+    "today_collection_points": [],
+    "total_collected_weight": 0,
+    "collection_progress": 0,
+    "route_plan": {
+      "route_id": "ROUTE-003",
+      "route_name": "南部片区收运路线",
+      "total_distance": 18.2,
+      "estimated_duration": "3小时45分",
+      "stops": ["滨江小区", "河畔花园", "水岸华庭", "江景公寓"],
+      "start_time": 1706016000000,
+      "end_time": 1706027700000
+    },
+    "fuel_level": 92,
+    "current_speed": 0,
+    "exception_records": [
+      {
+        "exception_id": "EXC-003",
+        "type": "路线偏离",
+        "level": "warning",
+        "description": "车辆偏离预定路线，已联系司机确认",
+        "location": "滨江路",
+        "coordinates": {
+          "latitude": 31.2304,
+          "longitude": 121.4737
+        },
+        "occurred_at": 1706011800000,
+        "status": "investigating",
+        "handled_by": null,
+        "handled_at": null
+      }
+    ],
+    "transfer_station_records": {
+      "last_entry": null,
+      "today_entries": []
+    },
+    "last_update_time": 1706013000000,
+    "createdAt": 1705900800000,
+    "updatedAt": 1706013000000
+  },
+  {
+    "_id": "4",
+    "vehicle_id": "VEH-004",
+    "plate_number": "沪D13579",
+    "driver_name": "赵师傅",
+    "driver_phone": "13800138004",
+    "vehicle_type": "其他垃圾车",
+    "current_location": {
+      "address": "维修站",
+      "coordinates": {
+        "latitude": 31.2274,
+        "longitude": 121.4767
+      }
+    },
+    "status": "maintenance",
+    "today_collection_points": [],
+    "total_collected_weight": 0,
+    "collection_progress": 0,
+    "route_plan": {
+      "route_id": "ROUTE-004",
+      "route_name": "北部片区收运路线",
+      "total_distance": 16.5,
+      "estimated_duration": "3小时",
+      "stops": ["北部小区", "商业区", "工业园", "物流园"],
+      "start_time": null,
+      "end_time": null
+    },
+    "fuel_level": 100,
+    "current_speed": 0,
+    "exception_records": [],
+    "transfer_station_records": {
+      "last_entry": {
+        "station_name": "北部转运站",
+        "entry_time": 1705998000000,
+        "exit_time": 1705998600000,
+        "weight_before": 850,
+        "weight_after": 0
+      },
+      "today_entries": [
+        {
+          "station_name": "北部转运站",
+          "entry_time": 1705998000000,
+          "exit_time": 1705998600000,
+          "weight_before": 850,
+          "weight_after": 0
+        }
+      ]
+    },
+    "last_update_time": 1706012400000,
+    "createdAt": 1705900800000,
+    "updatedAt": 1706012400000
+  }
+]
+  

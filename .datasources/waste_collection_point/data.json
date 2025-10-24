@@ -1,0 +1,155 @@
+
+[
+  {
+    "_id": "1",
+    "id": "POINT-001",
+    "name": "幸福小区A栋垃圾屋",
+    "address": "幸福路88号A栋东侧",
+    "type": "垃圾屋",
+    "status": "normal",
+    "capacity": 75,
+    "weight": 1087.5,
+    "disposals": 45,
+    "totalWeight": 1450,
+    "aiCaptures": 12,
+    "hasCamera": true,
+    "manager": "张师傅",
+    "phone": "13800138001",
+    "lastCollection": 1705987200000,
+    "lastUpdate": 1706008800000,
+    "alerts": [],
+    "location": {
+      "lat": 31.2304,
+      "lng": 121.4737
+    },
+    "createdAt": 1705900800000,
+    "updatedAt": 1706008800000
+  },
+  {
+    "_id": "2",
+    "id": "POINT-002",
+    "name": "阳光花园B区投放点",
+    "address": "阳光大道123号B区南门",
+    "type": "投放点",
+    "status": "warning",
+    "capacity": 95,
+    "weight": 931,
+    "disposals": 32,
+    "totalWeight": 980,
+    "aiCaptures": 8,
+    "hasCamera": true,
+    "manager": "李师傅",
+    "phone": "13800138002",
+    "lastCollection": 1706019600000,
+    "lastUpdate": 1706009400000,
+    "alerts": [
+      {
+        "id": "ALERT-001",
+        "type": "满溢预警",
+        "level": "warning",
+        "message": "垃圾桶已满95%，需要立即清运",
+        "time": 1706005800000,
+        "status": "pending"
+      }
+    ],
+    "location": {
+      "lat": 31.2294,
+      "lng": 121.4747
+    },
+    "createdAt": 1705900800000,
+    "updatedAt": 1706009400000
+  },
+  {
+    "_id": "3",
+    "id": "POINT-003",
+    "name": "绿地小区C栋收集站",
+    "address": "绿地路456号C栋西侧",
+    "type": "收集站",
+    "status": "normal",
+    "capacity": 60,
+    "weight": 720,
+    "disposals": 38,
+    "totalWeight": 1200,
+    "aiCaptures": 15,
+    "hasCamera": true,
+    "manager": "王师傅",
+    "phone": "13800138003",
+    "lastCollection": 1705976400000,
+    "lastUpdate": 1706008200000,
+    "alerts": [],
+    "location": {
+      "lat": 31.2284,
+      "lng": 121.4757
+    },
+    "createdAt": 1705900800000,
+    "updatedAt": 1706008200000
+  },
+  {
+    "_id": "4",
+    "id": "POINT-004",
+    "name": "和谐家园D区垃圾房",
+    "address": "和谐路789号D区北门",
+    "type": "垃圾房",
+    "status": "critical",
+    "capacity": 98,
+    "weight": 1617,
+    "disposals": 52,
+    "totalWeight": 1650,
+    "aiCaptures": 6,
+    "hasCamera": true,
+    "manager": "赵师傅",
+    "phone": "13800138004",
+    "lastCollection": 1706012400000,
+    "lastUpdate": 1706009100000,
+    "alerts": [
+      {
+        "id": "ALERT-002",
+        "type": "异常投放",
+        "level": "critical",
+        "message": "检测到有害垃圾混入其他垃圾",
+        "time": 1706004900000,
+        "status": "pending"
+      },
+      {
+        "id": "ALERT-003",
+        "type": "满溢预警",
+        "level": "warning",
+        "message": "垃圾桶已满98%，急需清运",
+        "time": 1706003700000,
+        "status": "pending"
+      }
+    ],
+    "location": {
+      "lat": 31.2274,
+      "lng": 121.4767
+    },
+    "createdAt": 1705900800000,
+    "updatedAt": 1706009100000
+  },
+  {
+    "_id": "5",
+    "id": "POINT-005",
+    "name": "智慧社区E栋投放站",
+    "address": "智慧街321号E栋南侧",
+    "type": "投放站",
+    "status": "normal",
+    "capacity": 45,
+    "weight": 400.5,
+    "disposals": 28,
+    "totalWeight": 890,
+    "aiCaptures": 0,
+    "hasCamera": false,
+    "manager": "陈师傅",
+    "phone": "13800138005",
+    "lastCollection": 1705983600000,
+    "lastUpdate": 1706007600000,
+    "alerts": [],
+    "location": {
+      "lat": 31.2264,
+      "lng": 121.4777
+    },
+    "createdAt": 1705900800000,
+    "updatedAt": 1706007600000
+  }
+]
+  
